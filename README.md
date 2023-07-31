@@ -9,6 +9,13 @@ Este es un proyecto de catálogo en el cual se pueden agregar y ver películas, 
 - Listado de todas las películas, series y documentales en la página de inicio.
 - Interfaz de usuario simple y fácil de usar.
 
+## Requisitos
+
+Asegúrate de tener las siguientes versiones de Ruby y Rails instaladas:
+
+- Ruby 2.7.2
+- Rails 7.0.6
+
 ## Instalación
 
 1. Clona este repositorio en tu máquina local utilizando el siguiente comando:
