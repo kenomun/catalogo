@@ -1,2 +1,35 @@
-<h1>Series#index</h1>
-<p>Find me in app/views/series/index.html.erb</p>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-12">
+      <% if flash[:success] %>
+        <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+          <%= flash[:success] %>
+        </div>
+      <% end %>  
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-title text-center">Listado de Series</h1>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Sinopsis</th>
+                <th>Director</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @series.each do |serie| %>
+                <tr>
+                  <td><%= serie.name %></td>
+                  <td><%= serie.synopsis %></td>
+                  <td><%= serie.director %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+          <%= link_to "Agregar nueva serie", new_series_path, class: "btn btn-primary mt-3" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

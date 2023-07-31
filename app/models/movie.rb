@@ -11,4 +11,5 @@
 #  updated_at :datetime         not null
 #
 class Movie < ApplicationRecord
+    validates_presence_of :name, :synopsis, :director
 end
